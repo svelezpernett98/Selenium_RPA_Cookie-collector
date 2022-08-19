@@ -18,11 +18,11 @@ init = webdriver.Chrome(PATH, chrome_options=picture_options)
 
 # ---------------INGRESAR AL SITIO DESEADO, Y SE LOGUEA CON USUARIO Y CONTRASEÑA---------------:
 
-# init.get("http://192.168.20.18/artmode/control.php")
+# init.get("website url")
 # login_button = WebDriverWait(init, 60).until(EC.presence_of_element_located((By.ID, 'uname')))
-# login_button.send_keys("yesito")
+# login_button.send_keys("username")
 # password_button = WebDriverWait(init, 60).until(EC.presence_of_element_located((By.ID, 'pwd'))) 
-# password_button.send_keys("yo12345")
+# password_button.send_keys("password")
 # enter_button = WebDriverWait(init, 60).until(EC.presence_of_element_located((By.XPATH, '/html/body/form/div[1]/div/div/table/tbody/tr[5]/td[2]/input'))).click()
 
 
@@ -33,7 +33,7 @@ init = webdriver.Chrome(PATH, chrome_options=picture_options)
 
 # ESTA PARTE INGRESA AL SITIO DESEADO, CARGA LAS COOKIES Y LAS INGRESA EN EL SITIO WEB UNA POR UNA CON EL CICLO FOR, LUEGO REFRESCA EL SITIO PARA QUE INGRESE NUEVAMENTE YA UTILIZANDO LAS COOKIES:
 
-init.get("http://192.168.20.18/artmode/control.php")
+init.get("website url")
 cookies = pickle.load(open("C:/Users/svelez/Documents/botsRPA/RPA_consumo_xls/cookies.pkl", "rb"))
 for cookie in cookies:
     init.add_cookie(cookie)
